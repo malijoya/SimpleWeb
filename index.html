@@ -3,131 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimpleWeb - Your Digital Solution</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Muhammad Ali Joya - Full Stack Developer specializing in web and mobile development with expertise in React, Node.js, and Android.">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, React, Node.js, Android, Muhammad Ali Joya">
+    <meta name="author" content="Muhammad Ali Joya">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Muhammad Ali Joya - Full Stack Developer">
+    <meta property="og:description" content="BSIT graduate skilled in modern web and mobile development. Passionate about clean UI and responsive design.">
+    <meta property="og:type" content="website">
+    
+    <title>Muhammad Ali Joya - Full Stack Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white">
+<body>
+    
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-blue-600">SimpleWeb</h1>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
-                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition duration-300">Features</a>
-                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">About</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-2 space-y-2">
-                <a href="#home" class="block text-gray-700 hover:text-blue-600">Home</a>
-                <a href="#features" class="block text-gray-700 hover:text-blue-600">Features</a>
-                <a href="#about" class="block text-gray-700 hover:text-blue-600">About</a>
-                <a href="#contact" class="block text-gray-700 hover:text-blue-600">Contact</a>
-            </div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">MAJ</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Welcome to <span class="text-blue-600">SimpleWeb</span>
-            </h1>
-            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Create amazing digital experiences with our simple yet powerful web solutions.
-                Built with modern technologies for the future.
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <p class="hero-greeting">👋 Hello, I'm</p>
+            <h1 class="hero-title">Muhammad Ali Joya</h1>
+            <h2 class="hero-subtitle">Full Stack Developer</h2>
+            <p class="hero-description">
+                BSIT graduate (CGPA 3.34) skilled in HTML, CSS, JavaScript, React, Node, Kotlin, Android Studio, Git, Docker & Firebase. 
+                Passionate about clean UI, responsive design and turning ideas into working web or mobile products.
             </p>
-            <div class="space-x-4">
-                <button id="cta-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
-                    Get Started
-                </button>
-                <button id="learn-more" class="bg-white hover:bg-gray-50 text-blue-600 font-bold py-3 px-8 rounded-lg border-2 border-blue-600 transition duration-300">
-                    Learn More
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Features</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Fast & Responsive</h3>
-                    <p class="text-gray-600">Lightning-fast loading times and fully responsive design that works on all devices.</p>
-                </div>
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Easy to Use</h3>
-                    <p class="text-gray-600">Intuitive interface and simple setup process. Get started in minutes, not hours.</p>
-                </div>
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
-                    <p class="text-gray-600">Built with security best practices and reliable infrastructure you can trust.</p>
-                </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i>
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">About SimpleWeb</h2>
-                    <p class="text-gray-600 mb-6">
-                        We're passionate about creating digital solutions that make a difference.
-                        Our team combines creativity with technical expertise to deliver exceptional
-                        web experiences that drive results.
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Crafting Digital Experiences</h3>
+                    <p>
+                        I'm a passionate Full Stack Developer with a Bachelor's degree in Information Technology and a strong foundation 
+                        in both web and mobile development. My journey in tech is driven by a love for creating intuitive, 
+                        responsive, and visually appealing applications.
                     </p>
-                    <p class="text-gray-600 mb-6">
-                        Whether you're a startup looking to establish your online presence or an
-                        established business wanting to modernize your digital footprint, we have
-                        the tools and expertise to help you succeed.
+                    <p>
+                        With expertise spanning from frontend frameworks like React to backend technologies like Node.js and Express, 
+                        along with mobile development using Kotlin and Android Studio, I bring a comprehensive skill set to every project. 
+                        I'm committed to writing clean, maintainable code and continuously learning new technologies.
                     </p>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
-                        Learn More About Us
-                    </button>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
-                    <p class="text-gray-600 mb-4">
-                        To empower businesses and individuals with accessible, high-quality web solutions
-                        that enhance their digital presence and drive growth.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-blue-600">500+</div>
-                            <div class="text-sm text-gray-600">Projects Completed</div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">3.34</div>
+                            <div class="stat-label">CGPA</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-blue-600">98%</div>
-                            <div class="text-sm text-gray-600">Client Satisfaction</div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Dedication</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <h3>🎓 Education</h3>
+                        <p><strong>Bachelor of Science in Information Technology</strong></p>
+                        <p>CGPA: 3.34</p>
+                        <div class="education-badge">BSIT Graduate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-html5" style="color: #E34F26;"></i></div>
+                    <div class="skill-name">HTML5</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-css3-alt" style="color: #1572B6;"></i></div>
+                    <div class="skill-name">CSS3</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-js" style="color: #F7DF1E;"></i></div>
+                    <div class="skill-name">JavaScript</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-react" style="color: #61DAFB;"></i></div>
+                    <div class="skill-name">React</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-node-js" style="color: #339933;"></i></div>
+                    <div class="skill-name">Node.js</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-server" style="color: #68A063;"></i></div>
+                    <div class="skill-name">Express</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-fire" style="color: #FFCA28;"></i></div>
+                    <div class="skill-name">Firebase</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database" style="color: #4479A1;"></i></div>
+                    <div class="skill-name">MySQL</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-git-alt" style="color: #F05032;"></i></div>
+                    <div class="skill-name">Git</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-docker" style="color: #2496ED;"></i></div>
+                    <div class="skill-name">Docker</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-android" style="color: #3DDC84;"></i></div>
+                    <div class="skill-name">Android</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code" style="color: #7F52FF;"></i></div>
+                    <div class="skill-name">Kotlin</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fab fa-figma" style="color: #F24E1E;"></i></div>
+                    <div class="skill-name">Figma</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-plug" style="color: #009688;"></i></div>
+                    <div class="skill-name">REST APIs</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt" style="color: #667eea;"></i></div>
+                    <div class="skill-name">Responsive Design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: AI Resume Analyzer -->
+                <div class="project-card">
+                    <img src="C:/Users/Muhammad Ali Joya/.gemini/antigravity/brain/eb47d36e-d6a8-4e2e-a726-8591ea9625c2/ai_resume_analyzer_1767809424531.png" alt="AI Resume Analyzer" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">AI Resume Analyzer</h3>
+                        <p class="project-description">
+                            An intelligent application that leverages AI to analyze resumes, providing insights on formatting, 
+                            content quality, and match percentage with job descriptions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: E-Commerce Platform -->
+                <div class="project-card">
+                    <img src="C:/Users/Muhammad Ali Joya/.gemini/antigravity/brain/eb47d36e-d6a8-4e2e-a726-8591ea9625c2/project_placeholder_2_1767809454585.png" alt="E-Commerce Platform" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Responsive E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-featured e-commerce platform with user authentication, product management, shopping cart, 
+                            and payment integration. Fully responsive across all devices.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Mobile Task Manager -->
+                <div class="project-card">
+                    <img src="C:/Users/Muhammad Ali Joya/.gemini/antigravity/brain/eb47d36e-d6a8-4e2e-a726-8591ea9625c2/project_placeholder_1_1767809440492.png" alt="Mobile Task Manager" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Mobile Task Manager</h3>
+                        <p class="project-description">
+                            A modern Android task management application with cloud sync, reminders, and collaborative features. 
+                            Built with clean architecture principles.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Material Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -136,86 +278,59 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Get In Touch</h2>
-            <div class="max-w-2xl mx-auto">
-                <form class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <p class="hero-description">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
+                    Feel free to reach out!
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">mali.joya@example.com</div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                        <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Pakistan</div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                        <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="contact-label">Status</div>
+                        <div class="contact-value">Available for Work</div>
                     </div>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                        Send Message
-                    </button>
-                </form>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:mali.joya@example.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p>&copy; 2024 SimpleWeb. All rights reserved.</p>
-            <div class="mt-4 space-x-6">
-                <a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-blue-400 transition duration-300">Terms of Service</a>
-                <a href="#" class="hover:text-blue-400 transition duration-300">Contact</a>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Muhammad Ali Joya. Crafted with <i class="fas fa-heart" style="color: #f5576c;"></i> and <i class="fas fa-coffee" style="color: #667eea;"></i></p>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-
-        // CTA button interaction
-        document.getElementById('cta-button').addEventListener('click', function() {
-            alert('Thank you for your interest! We\'ll get back to you soon.');
-        });
-
-        // Learn more button
-        document.getElementById('learn-more').addEventListener('click', function() {
-            document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll respond soon.');
-            this.reset();
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
